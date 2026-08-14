@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: #2b2b2b;
 }
 
 #container{
@@ -10,6 +17,7 @@
 }
 
 #imageLeft{
+    position: relative;
     flex: 1;
 }
 
@@ -20,10 +28,128 @@
     object-fit: cover;
 }
 
-#rightContainer{
-    flex: 1;
+#logoBand{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.45);
 }
 
-#plant{
-    height: 100vh;
+#logoText{
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+#rightContainer{
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    background: #fafafa;
+}
+
+#upper{
+    padding: 80px 48px 40px 48px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+#upper p{
+    margin-bottom: 18px;
+}
+
+#upper em{
+    font-style: italic;
+}
+
+#middle{
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 24px 48px 40px 48px;
+}
+
+#formTitle{
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.formRow{
+    display: flex;
+    gap: 48px;
+    margin-bottom: 20px;
+}
+
+.formField{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 280px;
+}
+
+.formField label{
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+.formField input{
+    padding: 8px 10px;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+}
+
+.formField input:focus{
+    border-color: #4a78c4;
+    box-shadow: 0 0 4px rgba(74, 120, 196, 0.4);
+}
+
+.formField input:invalid:not(:placeholder-shown){
+    border-color: #b23b3b;
+}
+
+#bottom{
+    padding: 32px 48px;
+}
+
+#createAccount{
+    background: #596d48;
+    color: white;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 12px 44px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 24px;
+}
+
+#createAccount:hover{
+    background: #4a5c3c;
+}
+
+#loginLine{
+    font-size: 16px;
+}
+
+#loginLine a{
+    color: #596d48;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#loginLine a:hover{
+    text-decoration: underline;
 }
